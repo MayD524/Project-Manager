@@ -29,7 +29,7 @@ function createFile(file, textData){
 function makeProject(proj_type){
 
     let cwd = process.cwd();
-    let data = getJson("C:\\Users\\Cross\\Desktop\\project_manager\\src\\config.json");
+    let data = getJson("C:\\ProjectManager\\Project Manager\\src\\config.json");
     
     switch(proj_type){
         case "python":
@@ -50,11 +50,18 @@ function makeProject(proj_type){
             createFile(`${cwd}\\run.bat`, `${data['javascript_interpreter']} ${cwd}\\Program.js`);
             createFile(`${cwd}\\build.bat`, `${data['javascript_compiler']} ${cwd}\\Program.js`);
             break;
+        
+        case "go":
+            let goFile = `${cwd}\\Program.go`;
+            createFile(goFile, readFile(data['go']));
+            createFile(`${cwd}\\run.bat`, `${data['go_run']} ${cwd}\\Program.go`);
+            createFile(`${cwd}\\build.bat`, `${data['go_compile']} ${cwd}\\Program.go`);
+            break;
     }
 }
 
 function displayHelp(){
-    let help = readFile("C:\\Users\\Cross\\Desktop\\project_manager\\src\\help.txt");
+    let help = readFile("C:\\ProjectManager\\Project Manager\\src\\help.txt");
     console.log(help);
 }
 
@@ -65,8 +72,8 @@ function main(){
         displayHelp();
         return 0;
     }
+    // build doesn't work just yet
     for (let i = 0; i < argv.length; i++){
-        console.log(argv[i]);
         var current = argv[i];
         
         switch (current){
@@ -77,6 +84,7 @@ function main(){
                     console.log("command 'new' needs a second argument for project name.")
                 }
                 return 0;
+
             case "build":
                 if (fs.existsSync('build.bat')){
                     require('child_process').exec('cmd /c build.bat', (err) =>{

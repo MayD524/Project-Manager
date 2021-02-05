@@ -1,10 +1,13 @@
 {
     "projects"                  :"projects.json",
-    "python"                    : "C:\\Users\\Cross\\Desktop\\project_manager\\defaults\\default.py",
+    "python"                    : "C:\\ProjectManager\\Project Manager\\defaults\\default.py",
     "python_interpreter"        : "python",
-    "javascript"                : "C:\\Users\\Cross\\Desktop\\project_manager\\defaults\\default.js",
+    "javascript"                : "C:\\ProjectManager\\Project Manager\\defaults\\default.js",
     "javascript_interpreter"    : "node",
     "javascript_compiler"       : "jsc",
-    "csharp"                    : "C:\\Users\\Cross\\Desktop\\project_manager\\defaults\\defaults.cs",
-    "csharp_compiler"           : "csc"   
+    "csharp"                    : "C:\\ProjectManager\\Project Manager\\defaults\\defaults.cs",
+    "csharp_compiler"           : "csc",
+    "go"                        : "C:\\ProjectManager\\Project Manager\\defaults\\default.go",
+    "go_run"                    : "go run",
+    "go_compile"                : "go build"
 }
