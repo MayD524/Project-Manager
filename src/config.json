@@ -1,0 +1,10 @@
+{
+    "projects"                  :"projects.json",
+    "python"                    : "C:\\Users\\Cross\\Desktop\\project_manager\\defaults\\default.py",
+    "python_interpreter"        : "python",
+    "javascript"                : "C:\\Users\\Cross\\Desktop\\project_manager\\defaults\\default.js",
+    "javascript_interpreter"    : "node",
+    "javascript_compiler"       : "jsc",
+    "csharp"                    : "C:\\Users\\Cross\\Desktop\\project_manager\\defaults\\defaults.cs",
+    "csharp_compiler"           : "csc"   
+}

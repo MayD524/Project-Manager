@@ -1,0 +1,13 @@
+Program Manager version 0.1
+
+run --help for this page
+
+commands:
+    new:
+        python      - makes a new python file
+        javascript  - makes a new javascript project
+        c#          - make a new c# file
+
+    -- NOT ADDED -- 
+    build - runs the build.bat file (if applicable)
+    run   - runs the run.bat file (if applicable)
