@@ -3,11 +3,13 @@ Program Manager version 0.1
 run --help for this page
 
 commands:
-    new:
-        python      - makes a new python file
+    new: new <language> <name>
+        python      - makes a new python project
         javascript  - makes a new javascript project
-        c#          - make a new c# file
+        c#          - make a new c# project
+        go          - make a new go project
+        
 
-    -- NOT ADDED -- 
     build - runs the build.bat file (if applicable)
     run   - runs the run.bat file (if applicable)
+    find  - Checks the projects.json and finds a project
